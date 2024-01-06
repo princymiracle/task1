@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:task1/route/route/routes.dart';
+import 'package:task1/route/screen/gesture.dart';
+import 'package:task1/route/screen/gesture.dart';
+
+
 
 class SignPage extends StatefulWidget {
   const SignPage({super.key});
@@ -14,6 +20,15 @@ class _SignPageState extends State<SignPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: InkWell(
+          onTap: () {
+            Get.back();
+          },
+          child: Icon(Icons.arrow_back),
+        ),
+
+      ),
       body: Column(
         children: [
           Padding(
@@ -57,9 +72,9 @@ class _SignPageState extends State<SignPage> {
             ),
           ),
           SizedBox(height: 20,),
-          ElevatedButton(onPressed: () {
+          ElevatedButton(onPressed: () => Get.toNamed(Routes.gesturePage),
 
-          }, child: Text("Sign up"),
+           child: Text("Sign up"),
             style: ButtonStyle(
               fixedSize: MaterialStateProperty.all(Size(100, 50),),
             ),

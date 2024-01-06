@@ -15,6 +15,15 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: InkWell(
+          onTap: () {
+            Get.back();
+          },
+          child: Icon(Icons.arrow_back),
+        ),
+
+      ),
       body: Column(
         children: [
             Padding(
