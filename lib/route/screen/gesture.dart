@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class GesturePage extends StatefulWidget {
-  const GesturePage({super.key});
 
+   // GesturePage(  this.nameFromeHome);
+   // var nameFromeHome;
   @override
   State<GesturePage> createState() => _GesturePageState();
 }
-
 class _GesturePageState extends State<GesturePage> {
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         leading: InkWell(
@@ -19,14 +20,12 @@ class _GesturePageState extends State<GesturePage> {
           },
             child: Icon(Icons.arrow_back),
         ),
-
       ),
-      body: GestureDetector(
-        child: Center(
+      body:
+         Center(
           child: Column(
-
-
             children: [
+              // Text("Hello , ${widget.nameFromeHome}"),
               Text("Hello World"),
               SizedBox(height: 5,),
               Text("Hello Guys"),
@@ -41,16 +40,7 @@ class _GesturePageState extends State<GesturePage> {
             ],
           ),
         ),
-
-
-            // child: RichText(
-            //   text: new TextSpan(
-            //     text: "Next",
-            //   ),
-            // ),
-
-
-      )
     );
   }
 }
+
