@@ -2,6 +2,7 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:task1/apicall/api_call.dart';
 import 'package:task1/route/route/routes.dart';
 import 'package:task1/route/route/screen.dart';
 import 'package:task1/route/screen/firstscreen.dart';
@@ -16,17 +17,19 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      initialRoute: Routes.loginPage,
-      getPages: Screens.routes,
+      home: PostApi(),
+      // initialRoute: Routes.loginPage,
+      // getPages: Screens.routes,
     );
   }
 }
+
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
