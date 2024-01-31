@@ -10,56 +10,61 @@ class urlLuncherPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Url Luncher"),
       ),
-      body: Column(
-        children: [
-          ElevatedButton(
-            onPressed: _launchUrl,
-            child: Text("Open Chrome"),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              final Uri smsLaunchUri = Uri(
-                scheme: 'sms',
-                path: '0118 999 881 999 119 7253',
-                queryParameters: <String, String>{
-                  'body': Uri.encodeComponent('Example Subject & Symbols are allowed!'),
-                },
-              );
-              launchUrl(smsLaunchUri);
-            },
-            child: Text("Send Message"),
-          ),
-          ElevatedButton(
-              onPressed: (){
-                final Uri telLaunchUri = Uri(
-                    scheme: 'sms',
-                    path: '1234567892',
-                );
-              },
-              child: Text("Call "),
-          ),
-          ElevatedButton(
+      body: Padding(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          children: [
+            ElevatedButton(
+              onPressed: _launchUrl,
+              child: Text("Open Chrome"),
+            ),
+            SizedBox(height: 8),
+            ElevatedButton(
               onPressed: () {
-                String? encodeQueryParameters(Map<String, String> params) {
-                  return params.entries
-                      .map((MapEntry<String, String> e) =>
-                  '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
-                      .join('&');
-                }
-// ···
-                final Uri emailLaunchUri = Uri(
-                  scheme: 'mailto',
-                  path: 'princy@gmail.com',
-                  query: encodeQueryParameters(<String, String>{
-                    'subject': 'Hello Princy !! I Am From in Surat ',
-                  }),
+                final Uri smsLaunchUri = Uri(
+                  scheme: 'sms',
+                  path: '0118 999 881 999 119 7253',
+                  queryParameters: <String, String>{
+                    'body': Uri.encodeComponent('Example Subject & Symbols are allowed!'),
+                  },
                 );
-
-                launchUrl(emailLaunchUri);
+                launchUrl(smsLaunchUri);
               },
-              child: Text("Send Email"),
-          ),
-        ],
+              child: Text("Send Message"),
+            ),
+            SizedBox(height: 8),
+            ElevatedButton(
+                onPressed: (){
+                  final Uri telLaunchUri = Uri(
+                      scheme: 'sms',
+                      path: '1234567892',
+                  );
+                },
+                child: Text("Call "),
+            ),
+            SizedBox(height: 8),
+            ElevatedButton(
+                onPressed: () {
+                  String? encodeQueryParameters(Map<String, String> params) {
+                    return params.entries
+                        .map((MapEntry<String, String> e) =>
+                    '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
+                        .join('&');
+                  }
+        // ···
+                  final Uri emailLaunchUri = Uri(
+                    scheme: 'mailto',
+                    path: 'princy@gmail.com',
+                    query: encodeQueryParameters(<String, String>{
+                      'subject': 'Hello Princy !! I Am From in Surat ',
+                    }),
+                  );
+                  launchUrl(emailLaunchUri);
+                },
+                child: Text("Send Email"),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -70,3 +75,5 @@ class urlLuncherPage extends StatelessWidget {
     }
   }
 }
+
+

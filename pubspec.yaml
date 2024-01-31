@@ -36,10 +36,11 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   get:
-  http: ^1.1.2
+ # http: ^1.1.2
   lazy_load_scrollview:
   get_storage:
   url_launcher: ^6.2.4
+  http: ^1.2.0
 
 
 
