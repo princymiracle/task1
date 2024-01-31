@@ -31,15 +31,3 @@ main () {
 
 }
 
-/*
-    Dart vs Dynamic
-    What are Functions ?
-    List in Dart 
-    Dart Hashmaps
-    Final VS const Difference
-    Conditonal program
-    Loops
-    View Controller life cycle/activity
-    dicitionary/map
-    Navigation push/pops.
- */
