@@ -87,7 +87,6 @@ import 'package:http/http.dart' as http;
 import 'TodosModel.dart';
 
 
-
 class TodosController extends GetxController{
   String url = "https://dummyjson.com/users/5/todos";
   List<TodosModel> todos = [];

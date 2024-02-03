@@ -1,15 +1,18 @@
 import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:task1/LogInPage.dart';
 import 'package:task1/UrlLauncher.dart';
 import 'package:task1/apicall/api_call.dart';
 import 'package:task1/route/route/routes.dart';
 import 'package:task1/route/route/screen.dart';
 import 'package:task1/route/screen/firstscreen.dart';
 
+import 'API/CartApi/CartApi.dart';
 import 'API/GetDemoController.dart';
 import 'API/GetView.dart';
 import 'APICall_Getx/ProductListView.dart';
+import 'example.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,13 +30,12 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: urlLuncherPage(),
+      home: ExamplePage(),
       // initialRoute: Routes.loginPage,
       // getPages: Screens.routes,
     );
   }
 }
-
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
