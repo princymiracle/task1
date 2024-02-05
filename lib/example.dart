@@ -15,7 +15,7 @@ class ExamplePage extends StatelessWidget {
             clipper: SideCutClipper(),
             child: Container(
               height: 600,
-              width: 500  ,
+              width: 500,
               color: Colors.pink,
               child: Center(child: Text("SideCutClipper()")),
             ),

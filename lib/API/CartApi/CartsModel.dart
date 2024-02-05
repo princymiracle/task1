@@ -1,5 +1,3 @@
-
-
 class ProductModel {
   int id = 0;
   String title = "";

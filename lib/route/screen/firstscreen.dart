@@ -29,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Center(
-                  child: Image.asset('assets/images/l1.png',fit: BoxFit.cover,height: 200,width: 200,),),
+                  child: Image.asset('assets/images/l1.png',fit: BoxFit.cover ,height: 200,width: 200,),),
             ),
           SizedBox(height: 20,),
           Padding(

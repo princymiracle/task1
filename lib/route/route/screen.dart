@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-
 import 'package:task1/route/route/routes.dart';
 import 'package:task1/route/screen/firstscreen.dart';
 import 'package:task1/route/screen/gesture.dart';

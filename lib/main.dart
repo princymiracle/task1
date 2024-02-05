@@ -7,7 +7,6 @@ import 'package:task1/apicall/api_call.dart';
 import 'package:task1/route/route/routes.dart';
 import 'package:task1/route/route/screen.dart';
 import 'package:task1/route/screen/firstscreen.dart';
-
 import 'API/CartApi/CartApi.dart';
 import 'API/GetDemoController.dart';
 import 'API/GetView.dart';
@@ -24,15 +23,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: ExamplePage(),
-      // initialRoute: Routes.loginPage,
-      // getPages: Screens.routes,
+     home: ExamplePage(),
+     //  initialRoute: Routes.loginPage,
+     //  getPages: Screens.routes,
     );
   }
 }
