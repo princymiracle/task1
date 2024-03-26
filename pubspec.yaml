@@ -45,8 +45,6 @@ dependencies:
   flutter_custom_clippers:
   animations: ^2.0.0
 
-
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
